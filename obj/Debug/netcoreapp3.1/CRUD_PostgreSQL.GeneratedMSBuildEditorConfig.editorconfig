@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = CRUD_PostgreSQL
+build_property.ProjectDir = C:\iBOS_ALL\Akash\.Net-Web-API-With-postgresql\

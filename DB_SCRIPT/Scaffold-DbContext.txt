@@ -1,0 +1,21 @@
+﻿
+**************************** RnD API ****************************
+
+
+********************** Common Scaffold **********************
+//Windows
+scaffold-DataContext "User ID=postgres;Password=123456;Server=localhost;Port=5432;Database=CRUD_Database;Pooling=true;Connect Timeout=30;
+Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;" 
+Microsoft.EntityFrameworkCore -OutputDir "Models" -ContextDir "Data" -Context "DataContext"  -t EmployeeBasicInfo, Department -f
+
+
+
+scaffold-DbContext "Host=localhost;Database=CRUD_Database;Username=postgres;Password=123456" Npgsql.EntityFrameworkCore.PostgreSQL -o Models
+
+
+dotnet ef dbcontext scaffold "Host=localhost;Database=CRUD_Database;Username=postgres;Password=123456" Npgsql.EntityFrameworkCore.PostgreSQL
+
+
+scaffold-DbContext "host=localhost;database=CRUD_Database;user id=postgres;" Devart.Data.PostgreSql.Entity.EFCore -OutputDir "Models" -ContextDir "Data" -Context "DataContext" -t EmployeeBasicInfo, Department -f 
+
+scaffold-DbContext "Data Source=localhost;Initial Catalog=CRUD_Database;User ID=postgres;Password=123456;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;" Npgsql.EntityFrameworkCore.PostgreSQL -OutputDir "Models" -ContextDir "Data" -Context "DataContext"  -f
